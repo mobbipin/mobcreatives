@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="ThemeStarz">
 
+    <link rel="icon" href="assets/img/FAVICON.png" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/img/FAVICON.png" type="image/x-icon">
+
+
     <link href="assets/fonts/font-awesome.css" rel="stylesheet" type="text/css">
     <link href="assets/fonts/elegant-fonts.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
@@ -13,7 +17,7 @@
     <link rel="stylesheet" href="assets/css/magnific-popup.css" type="text/css">
     <link rel="stylesheet" href="assets/css/style.css" type="text/css">
 
-    <title>MOB CREATIVES | CREATIVITY TO FUTURE</title>
+    <title>MOB CREATIVES</title>
 
     <style>
         body { background-color: #f3f3f3; }
@@ -22,24 +26,22 @@
 </head>
 
 <body>
-
 <div class="page-wrapper">
     <header>
         <div class="brand animate"><a href=""><img src="assets/img/logo.png" alt=""></a></div>
         <nav>
-            <!-- <ul class="navigation animate">
-                <li><a href="" data-toggle="modal" data-target="#modal-about-us">About Us</a></li>
+            <ul class="navigation animate">
+                <!-- <li><a href="" data-toggle="modal" data-target="#modal-about-us">About Us</a></li>
                 <li><a href="" data-toggle="modal" data-target="#modal-our-works">Our Works</a></li>
                 <li><a href="" data-toggle="modal" data-target="#modal-services">Services</a></li>
-                <li><a href="" data-toggle="modal" data-target="#modal-contact-us">Contact</a></li>
-            </ul> -->
+                <li><a href="" data-toggle="modal" data-target="#modal-contact-us">Contact</a></li> -->
+            </ul>
             <!--end navigation-->
         </nav>
     </header>
     <div class="content-wrapper">
         <div class="content-main animate">
             <div class="container">
-                <div class="center count-down animate" data-countdown-year="2023" data-countdown-month="02" data-countdown-day="14"></div>
                 <h1 class="font-size-90">GET READY</h1>
                 <h2 class="opacity-60">WE ARE COMING SOON</h2>
             </div>
@@ -47,21 +49,29 @@
         </div>
         <!--end content-main-->
         <div class="background-wrapper">
-            <div id="background-content"></div>
+            <div id="background-content">
+                <ul class="parallax" id="scene">
+                    <li class="layer opacity-90" data-depth="0.80"><img src="assets/img/parallax-4.svg" alt=""></li>
+                    <li class="layer opacity-90" data-depth="0.60"><img src="assets/img/parallax-3.svg" alt=""></li>
+                    <li class="layer opacity-90" data-depth="0.40"><img src="assets/img/parallax-2.svg" alt=""></li>
+                    <li class="layer opacity-90" data-depth="0.20"><img src="assets/img/parallax-1.svg" alt=""></li>
+                </ul>
+            </div>
         </div>
         <!--end background-wrapper-->
     </div>
     <!--end content-wrapper-->
     <footer>
         <div class="social-icons animate">
-            <a href="https://twitter.com/MobCr3atives
-            "><i class="fa fa-twitter"></i></a>
+            <a href="https://twitter.com/MobCr3atives"><i class="fa fa-twitter"></i></a>
             <a href="https://www.facebook.com/profile.php?id=100063618992620"><i class="fa fa-facebook"></i></a>
-            <!-- <a href="#"><i class="fa fa-youtube"></i></a> -->
-            <a href="https://www.instagram.com/mob_cr3atives_/?next=%2F
-            "><i class="fa fa-instagram"></i></a>
-            <!-- <a href="#"><i class="fa fa-pinterest"></i></a> -->
-            <!-- <a href="#"><i class="fa fa-google-plus"></i></a> -->
+            <a href="https://www.instagram.com/mob_cr3atives_/?next=%2F"><i class="fa fa-instagram"></i></a>
+            <!-- <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-youtube"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+            <a href="#"><i class="fa fa-pinterest"></i></a>
+            <a href="#"><i class="fa fa-google-plus"></i></a> -->
         </div>
         <!--end social-icons-->
     </footer>
@@ -465,7 +475,7 @@
 <script  src="assets/js/jquery.magnific-popup.min.js"></script>
 <script  src="assets/js/jquery.plugin.min.js"></script>
 <script  src="assets/js/jquery.countdown.min.js"></script>
-<script  src="assets/js/sketch.min.js"></script>
+<script  src="assets/js/jquery.parallax.min.js"></script>
 <script  src="assets/js/custom.js"></script>
 
 <script>
@@ -482,45 +492,15 @@
         google.maps.event.addDomListener(window, 'load', simpleMap(latitude, longitude, markerImage, mapTheme, mapElement));
     });
 
-
     // Background
 
-    var COLOURS = [ '#61dfff', '#A7EBCA', '#FFFFFF', '#ff6767', '#61dfff' ];
-    var radius = 0;
-    var randomColor = 0;
-
-    Sketch.create({
-
-        container: document.getElementById( 'background-content' ),
-        autoclear: false,
-        retina: 'auto',
-
-        update: function() {
-            radius = 2 + abs( sin( this.millis * 0.003 ) * 50 );
-        },
-
-        click: function() {
-            randomColor = parseInt( 0 + (COLOURS.length - 0) * Math.random(), 10 ) ;
-        },
-
-        touchmove: function() {
-
-            for ( var i = this.touches.length - 1, touch; i >= 0; i-- ) {
-
-                touch = this.touches[i];
-
-                this.lineCap = 'round';
-                this.lineJoin = 'round';
-                this.fillStyle = this.strokeStyle = COLOURS[ randomColor % COLOURS.length ];
-                this.lineWidth = radius;
-
-                this.beginPath();
-                this.moveTo( touch.ox, touch.oy );
-                this.lineTo( touch.x, touch.y );
-                this.stroke();
-            }
-        }
+    $('#scene').parallax({
+        calibrateX: true,
+        calibrateY: true,
+        originX: -1.0,
+        scalarX: 1400
     });
+
 
 
 </script>

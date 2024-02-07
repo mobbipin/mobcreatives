@@ -10,9 +10,9 @@ export default function Page() {
       <Header />
       <main className="h-screen text-[#283050]">
         <Hero />
-        <About />
+        {/* <About />
         <Services />
-        <Team />
+        <Team /> */}
       </main>
     </>
   );

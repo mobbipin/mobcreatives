@@ -26,7 +26,7 @@ export default function Hero() {
           alt="hero image"
           height={480}
           width={550}
-          className="origin-center -rotate-12"
+          className="hidden md:origin-center md:-rotate-12 md:block"
         />
       </div>
     </div>

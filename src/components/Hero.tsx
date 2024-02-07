@@ -9,7 +9,7 @@ export const notoSans = Noto_Sans({
 
 export default function Hero() {
   return (
-    <div className="h-[32rem] bg-[#EDB5B5] flex items-center">
+    <div className="bg-[#EDB5B5] flex items-center">
       <div className="md:flex md:items-center md:justify-between max-w-[120rem] m-auto">
         <div className="text-[#283050] flex flex-col gap-5">
           <h1
@@ -17,7 +17,7 @@ export default function Hero() {
           >
             Passionate and committed to creativity
           </h1>
-          <p className={`${inter.className} p-2`}>
+          <p className={`${inter.className} p-2 font-semibold`}>
             Elevate | Innovate | Dominate
           </p>
         </div>

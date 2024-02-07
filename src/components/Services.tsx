@@ -13,28 +13,28 @@ const services: Service[] = [
   {
     id: 1,
     title: "Website creation & Designing",
-    imgUrl: "/service2.jpeg",
+    imgUrl: "/service1.jpeg",
     description:
       "Lorem ipsum dolor sit amet consectetur. Et etiam mattis nunc amet eleifend faucibus dictum consequat arcu.",
   },
   {
     id: 2,
-    title: "Website creation & Designing",
+    title: "Graphic & Visualization",
     imgUrl: "/service2.jpeg",
     description:
       "Lorem ipsum dolor sit amet consectetur. Et etiam mattis nunc amet eleifend faucibus dictum consequat arcu.",
   },
   {
     id: 3,
-    title: "Website creation & Designing",
-    imgUrl: "/service2.jpeg",
+    title: "Broadcasting & Production",
+    imgUrl: "/service3.jpeg",
     description:
       "Lorem ipsum dolor sit amet consectetur. Et etiam mattis nunc amet eleifend faucibus dictum consequat arcu.",
   },
   {
     id: 4,
-    title: "Website creation & Designing",
-    imgUrl: "/service2.jpeg",
+    title: "Digital Marketing",
+    imgUrl: "/service4.jpeg",
     description:
       "Lorem ipsum dolor sit amet consectetur. Et etiam mattis nunc amet eleifend faucibus dictum consequat arcu.",
   },
@@ -46,15 +46,15 @@ export default function Services() {
       <h2 className={`text-3xl ${notoSans.className} font-bold`}>
         OUR SERVICES
       </h2>
-      <div className="flex gap-5 flex-wrap items-center justify-between">
+      <div className="flex gap-10  flex-wrap items-center justify-between">
         {services.map((service) => (
-          <div className="w-[30rem] flex flex-col gap-2">
+          <div className="w-[30rem] flex flex-col gap-2" key={service.id}>
             <Image
               src={service.imgUrl}
               alt="service image"
               height={200}
-              width={350}
-              className="object-cover w-full rounded-lg"
+              width={400}
+              className="object-cover w-full h-72 rounded-lg"
             />
             <h3 className="text-2xl font-bold">Graphic & Visualization</h3>
             <p>

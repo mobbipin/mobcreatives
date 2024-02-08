@@ -8,10 +8,10 @@ export const inter = Inter({
 import { FiAlignRight } from "react-icons/fi";
 export default function Header() {
   return (
-    <header className="flex items-center justify-between px-4 md:justify-around h-16 md:px-8">
+    <header className="flex h-16 items-center justify-between px-4 md:justify-around md:px-8">
       <p className={`font-bold lg:text-xl ${inter.className}`}>MOB CREATIVES</p>
       <nav>
-        <ul className="hidden text-sm sm:flex gap-10 font-medium lg:text-base">
+        <ul className="hidden gap-10 text-sm font-medium sm:flex lg:text-base">
           <li>Home</li>
           <li>About us</li>
           <li>Services</li>

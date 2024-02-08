@@ -34,14 +34,14 @@ const teams: Team[] = [
 
 export default function Team() {
   return (
-    <div className="max-w-screen-lg m-auto pt-20 flex flex-col gap-5">
+    <div className="m-auto flex max-w-screen-lg flex-col gap-5 pt-20">
       <h2 className={`text-3xl ${notoSans.className} font-bold`}>
         MEET OUR TEAMS
       </h2>
-      <div className="flex justify-between gap-10 flex-wrap items-center">
+      <div className="flex flex-wrap items-center justify-between gap-10">
         {teams.map((team: Team) => (
           <div
-            className="flex flex-col justify-center items-center gap-1"
+            className="flex flex-col items-center justify-center gap-1"
             key={team.id}
           >
             <Image
@@ -49,7 +49,7 @@ export default function Team() {
               alt="Team Image"
               height={300}
               width={200}
-              className="rounded-full w-60 h-60 object-cover"
+              className="h-60 w-60 rounded-full object-cover"
             />
             <h4 className="text-lg font-bold">{team.name}</h4>
             <p className="text-md">{team.role}</p>

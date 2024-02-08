@@ -42,26 +42,26 @@ const services: Service[] = [
 
 export default function Services() {
   return (
-    <div className="max-w-screen-lg m-auto flex flex-col gap-5 pt-20">
+    <div className="m-auto flex max-w-screen-lg flex-col gap-5 pt-20">
       <h2 className={`text-3xl ${notoSans.className} font-bold`}>
         OUR SERVICES
       </h2>
-      <div className="flex gap-10  flex-wrap items-center justify-between">
+      <div className="flex flex-wrap  items-center justify-between gap-10">
         {services.map((service) => (
-          <div className="w-[30rem] flex flex-col gap-2" key={service.id}>
+          <div className="flex w-[30rem] flex-col gap-2" key={service.id}>
             <Image
               src={service.imgUrl}
               alt="service image"
               height={200}
               width={400}
-              className="object-cover w-full h-72 rounded-lg"
+              className="h-72 w-full rounded-lg object-cover"
             />
             <h3 className="text-2xl font-bold">Graphic & Visualization</h3>
             <p>
               Lorem ipsum dolor sit amet consectetur. Et etiam mattis nunc amet
               eleifend faucibus dictum consequat arcu.
             </p>
-            <a className="underline text-sm">Learn More</a>
+            <a className="text-sm underline">Learn More</a>
           </div>
         ))}
       </div>

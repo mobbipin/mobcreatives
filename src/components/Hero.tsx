@@ -9,25 +9,21 @@ export const notoSans = Noto_Sans({
 
 export default function Hero() {
   return (
-    <div className="bg-[#EDB5B5] flex items-center">
-      <div className="md:flex md:items-center md:justify-between max-w-[120rem] m-auto">
-        <div className="text-[#283050] flex flex-col gap-5">
-          <h1
-            className={`text-lg sm:text-xl p-2 md:text-5xl md:w-96 font-semibold leading-tight mt-10 ${notoSans.className}`}
-          >
+    <div className="bg-[#EDB5B5] pb-20 pt-9">
+      <div className="m-auto grid max-w-screen-xl grid-cols-1 items-center  px-8 sm:grid-cols-2">
+        <div className="order-2 text-center">
+          <h1 className="mb-4 text-4xl font-bold tracking-tight">
             Passionate and committed to creativity
           </h1>
-          <p className={`${inter.className} p-2 font-semibold`}>
+          <p
+            className={`${inter.className} text-lg font-medium leading-normal text-gray-700`}
+          >
             Elevate | Innovate | Dominate
           </p>
         </div>
-        <Image
-          src="/hero.png"
-          alt="hero image"
-          height={480}
-          width={550}
-          className="hidden md:origin-center md:-rotate-12 md:block"
-        />
+        <div className="align-center order-1 flex -rotate-12 justify-center object-cover">
+          <Image src="/hero.png" alt="hero image" height={350} width={250} />
+        </div>
       </div>
     </div>
   );

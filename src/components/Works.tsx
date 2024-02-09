@@ -25,7 +25,7 @@ const works: Work[] = [
   },
 ];
 
-export default function Services() {
+export default function Works() {
   return (
     <div className="m-auto mt-28 flex max-w-screen-lg flex-col gap-5">
       <h2 className={`text-3xl ${notoSans.className} font-bold`}>OUR WORKS</h2>

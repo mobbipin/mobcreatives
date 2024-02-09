@@ -3,7 +3,10 @@ import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Services from "@/components/Services";
 import Team from "@/components/Team";
-import Work from "@/components/Works";
+import Works from "@/components/Works";
+import Articles from "@/components/Articles";
+import Customers from "@/components/Customers";
+import Meeting from "@/components/Meeting";
 
 export default function Page() {
   return (
@@ -14,7 +17,10 @@ export default function Page() {
         <About />
         <Services />
         <Team />
-        <Work />
+        <Works />
+        <Articles />
+        <Customers />
+        <Meeting />
       </main>
     </>
   );

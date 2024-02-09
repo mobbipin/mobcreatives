@@ -1,14 +1,9 @@
-import { Inter } from "next/font/google";
-
-export const inter = Inter({
-  subsets: ["latin"],
-  display: "swap",
-});
+import { inter } from "@/utils/fonts/inter";
 
 import { FiAlignRight } from "react-icons/fi";
 export default function Header() {
   return (
-    <header className="flex h-16 items-center justify-between px-4 md:justify-around md:px-8">
+    <header className="flex h-16 items-center justify-between px-4  md:px-8">
       <p className={`font-bold lg:text-xl ${inter.className}`}>MOB CREATIVES</p>
       <nav>
         <ul className="hidden gap-10 text-sm font-medium sm:flex lg:text-base">

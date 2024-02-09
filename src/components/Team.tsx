@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { notoSans } from "@/components/Hero";
+import { notoSans } from "@/utils/fonts/notoSans";
 
 type Team = {
   id: number;
@@ -34,8 +34,8 @@ const teams: Team[] = [
 
 export default function Team() {
   return (
-    <div className="m-auto flex max-w-screen-lg flex-col gap-5 pt-20">
-      <h2 className={`text-3xl ${notoSans.className} font-bold`}>
+    <div className="m-auto mt-28 flex max-w-screen-lg flex-col gap-5 px-4">
+      <h2 className={`text-2xl ${notoSans.className} font-bold`}>
         MEET OUR TEAMS
       </h2>
       <div className="flex flex-wrap items-center justify-between gap-10">
